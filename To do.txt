@@ -1,0 +1,4 @@
+1. Change color of date session
+2. highlight duplicate from table
+3. redownload button to get real time data
+4. append column that show people who has highest corresponding dino
