@@ -8,7 +8,7 @@ library(shinythemes)
 
 ##Global variables and cleaning the data
 url <- "https://docs.google.com/spreadsheets/d/1fxnSOjqDUzl47mKgiQy4kNZ6gKNrVqXb4-51kpFtD6k/export?format=csv&id=1fxnSOjqDUzl47mKgiQy4kNZ6gKNrVqXb4-51kpFtD6k&gid=1046519671"
-data <- read.csv(url,stringsAsFactors=FALSE,na.strings=c("","NA")) 
+data <- read.csv(url,stringsAsFactors=FALSE,na.strings=c("","NA"))[1:6] 
 
 data$Your.JWA.name <- str_trim(data$Your.JWA.name, side ="right")
 data$Timestamp <- as.POSIXct(data$Timestamp, format = "%m/%d/%Y %H:%M:%S")
