@@ -1,3 +1,4 @@
+## Load Packages
 library(tidyverse)
 library(ggpubr)
 library(shiny)
@@ -5,7 +6,8 @@ library(plotly)
 library(DT)
 library(shinythemes)
 library(shinyBS)
-##Global variables and cleaning the data
+
+## define global variables and clean the data
 url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vSPMVnMVJKsheRuoN-uFL0rz0KeQVzw2wvzCLCT0tlGubsRr3Jy221XSJWRf64cgfvQH5t-D_O8_Xow/pub?gid=69416159&single=true&output=csv"
 data <- read.csv(url,stringsAsFactors=FALSE,na.strings=c("","NA"))[1:6]
 
@@ -16,7 +18,7 @@ Alliances <- c(data$Alliance %>% unique())[-1]
 
 excl <- c('Titanoboa (epic)', 'Blue', 'Diplod', 'Woolly Mammoth', 'Allo g2 (epic)', 'Dsunga','Megaloceros (Deer)','Nasuto')
 
-##function
+## define global functions
 dataFreq <- function(x){
   data <- data %>% 
     filter(Timestamp > x) %>%
@@ -81,7 +83,6 @@ listCreate <- function(Freq,q,w,rmv) {
     {unique(c((Freq %>% filter(rank == 1) %>% filter(weight>4.1) )[,1]))}
   
   
-  
   x <- length(top1)
   indexDouble <- which((resultWeight[,1] %>%
                           unlist() %>%
@@ -116,7 +117,6 @@ listCreate <- function(Freq,q,w,rmv) {
 
 ## Define UI for dataset viewer app ----
 ui <- 
-  
   
   fluidPage(theme = shinytheme("cyborg"),
             fluidRow(column(3,
