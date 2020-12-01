@@ -1,6 +1,6 @@
 # Sanctuary - My First R Shiny App
 ## Quick Links
-  - [R Code](docs/App.R)
+  - [R Code](https://github.com/GDxj/Sanctuary/blob/master/App.R)
   - [Sample data](https://github.com/GDxj/Sanctuary/blob/master/Data0219.csv)
   - [Shiny.io](https://gdxj.shinyapps.io/SanctuaryApp/)
  
