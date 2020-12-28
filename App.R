@@ -8,7 +8,8 @@ library(shinythemes)
 library(shinyBS)
 
 ## define global variables and clean the data
-url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vSPMVnMVJKsheRuoN-uFL0rz0KeQVzw2wvzCLCT0tlGubsRr3Jy221XSJWRf64cgfvQH5t-D_O8_Xow/pub?gid=69416159&single=true&output=csv"
+url <- "https://docs.google.com/spreadsheets/d/1fxnSOjqDUzl47mKgiQy4kNZ6gKNrVqXb4-51kpFtD6k/export?format=csv&id=1fxnSOjqDUzl47mKgiQy4kNZ6gKNrVqXb4-51kpFtD6k&gid=1046519671"
+## "https://docs.google.com/spreadsheets/d/e/2PACX-1vSPMVnMVJKsheRuoN-uFL0rz0KeQVzw2wvzCLCT0tlGubsRr3Jy221XSJWRf64cgfvQH5t-D_O8_Xow/pub?gid=69416159&single=true&output=csv"
 data <- read.csv(url,stringsAsFactors=FALSE,na.strings=c("","NA"))[1:6]
 
 data$Your.JWA.name <- str_trim(data$Your.JWA.name, side ="right")
